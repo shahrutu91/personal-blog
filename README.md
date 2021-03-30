@@ -1,3 +1,3 @@
 ### Details
 
-This is a personal blog website developed for Frontend webdeveloper nanodegree from Udacity.
+This is a personal blog website developed for project within Frontend webdeveloper nanodegree from Udacity.
