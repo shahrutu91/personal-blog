@@ -1,0 +1,320 @@
+body{
+    background-color: rgb(221, 221, 203); 
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* main container */
+.main{
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto repeat(7 1fr);
+    grid-template-rows: auto repeat(5 1fr);
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd"
+    "feat feat feat feat feat feat feat"
+    "ms ms ms ms ms ms ms"
+    "bp bp bp bp bp bp bp"
+    "ft ft ft ft ft ft ft";
+    /* grid-gap:10px; */
+}
+/* header */
+.head{
+    grid-area: hd;  
+    /* border: 1px dotted blue; */
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+}
+.head p{
+    margin: 0;
+    font-weight: lighter;
+    letter-spacing: 10px    ;
+}
+.head h1{
+    margin: 0;
+}
+.head-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.head-inner li{
+    margin: 0 90px;
+    align-items: center;
+    display: block;
+}
+.head-inner a{
+    text-decoration: none;          
+    display: block;
+    transition: all 0.3s ease-out;
+} 
+.head-inner a:link{
+    color: black
+}                                                                     
+.head-inner a:visited{
+    color: black
+}                                                                     
+.head-inner a:hover{
+    color: #b51af1;
+    transform: rotate(6deg);
+}   
+.head-inner a:active{
+    color: black
+}     
+
+/* feature box */
+.feature{
+    grid-area: feat;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.feat-cont{
+    width: 700px;
+    border: 1px solid black;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+.feat-cont img{
+    width: 700px;
+    height: 600px;
+}
+.feat-cont h2, 
+p,
+h3 { 
+    padding: 10px;
+}
+
+.feat-cont a:link{
+    color: black;
+}
+.feat-cont a:visited{
+    color: black;
+}
+.feat-cont a:hover{
+    color: rgb(161, 68, 248);
+}
+.feat-cont a:active{
+    color: black;
+}
+
+.feat-cont a {
+    text-decoration: none;
+}
+/* miss post box */
+.miss{
+    grid-area: ms;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+}
+.miss h1{
+    padding-left: 40px;
+}
+.input{
+    padding-right: 40px;
+}
+.button{
+    background-color: rgb(66, 65, 68);
+    color: white;
+    border-radius: 3px;
+}
+
+/* blogpost */
+.blogpost{
+    grid-area: bp;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "lt rt";
+    grid-gap: 10px;
+    margin: auto;
+}
+.left{
+    grid-area: lt;
+}
+.left h3{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.post img{
+    width: 350px;
+    height: 350px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 750px;
+}
+.post1,
+.post2,
+.post3,
+.post4,
+.post5,
+.post6 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    border: 1px solid black;
+    justify-content: flex-start;
+}
+.post h4 {
+    text-align: center;
+    margin: 5px;
+    /* font-size: 15px; */
+}
+.post p{
+    text-align: start;
+}
+.time {
+    font-size: 12px;
+    text-align: start;
+}
+.post img {
+    margin: 10px;
+}
+#one{
+    display: inline-block;
+}
+#one a{
+    text-decoration: none;
+}
+.button1 {
+    background-color: rgb(74, 72, 78);
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+.right{
+    grid-area: rt;
+}
+.right img{
+    width: 400px;
+    height: 250px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 400px;
+}
+.about h3{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+.about p {
+    text-align: start;
+    font-size: 15px;
+    margin: 0;
+}
+.grid{
+    margin: 10px;
+    align-items: stretch;
+}
+.grid h4 {
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+.nestedgrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 50% 50%;
+    grid-gap: 5px;
+    padding: 10px;
+}
+.photo{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 337px;
+    display: flex;
+    align-items: stretch;
+}
+#one{
+    background-image: url("./image/blog-image/photo\ 1.jpeg");
+}
+#two {
+    background-image: url("./image/blog-image/photo\ 2.jpeg");
+}
+#three {
+    background-image: url("./image/blog-image/photo\ 3.jpeg");
+}
+#four{
+    background-image: url("./image/blog-image/photo\ 4.jpeg");
+}
+#five{
+    background-image: url("./image/blog-image/photo\ 5.jpeg");
+}
+#six{
+    background-image: url("./image/blog-image/photo\ 6.jpeg");
+}
+#seven {
+    background-image: url("./image/blog-image/photo\ 7.jpeg");
+}
+#eight{
+    background-image: url("./image/blog-image/photo\ 8.jpeg");
+}
+
+.fav {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+}
+.fav h4 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: inherit;
+}
+.fav p {
+    text-align: start;
+    font-size: 18px;
+}
+
+
+/* footer */
+.foot {
+    grid-area: ft;
+    /* border: 1px dotted blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+
+/* responsive */
