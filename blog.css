@@ -19,7 +19,7 @@ body{
     /* border: 2px solid black; */
 }
 /* header */
-.head{
+header{
     grid-area: hd;  
     /* border: 1px dotted blue; */
     border-bottom: 1px solid black;
@@ -29,13 +29,13 @@ body{
     align-items: center;
     font-size: 30px;
 }
-.head p{
+p{
     margin: 0;
-    font-weight: lighter;
-    letter-spacing: 10px    ;
+    font-size: 20px;
+
 }
-.head h1{
-    margin: 0;
+h1{
+    margin: 5px;
 }
 .head-inner{
     display: flex;
@@ -49,12 +49,13 @@ body{
 .head-inner li{
     margin: 0 90px;
     align-items: center;
+    display: block;
 }
 .head-inner a{
     text-decoration: none;          
     display: block;
     transition: all 0.3s ease-out;
-}                                                                   
+} 
 .head-inner a:link{
     color: black
 }                                                                     
@@ -68,6 +69,7 @@ body{
 .head-inner a:active{
     color: black
 }     
+
 
 .feat{
     grid-area: feat;
@@ -111,87 +113,51 @@ body{
 #nestedgrid{
     display: grid;
     grid-template-columns: repeat(2 1fr);
-    grid-template-rows: repeat(5 1fr);
+    grid-template-rows: auto;
     margin: auto;
     justify-content: center;
     align-items: center;
     padding: 10px;
     grid-gap: 10px;
 }
-.post1{
+.time{
+    font-size: 12px;
+}
+.post1 {
     display: flex;
     flex-direction: column;
     width: 450px;
     padding: 5px;
-    border: 1px solid black ;
-    grid-column: 1/2;
+    border: 1px solid black;
     grid-row: 1/2;
+    grid-column: 1/2;
 }
+
 .post2{
     display: flex;
     flex-direction: column;
     width: 450px;
     padding: 5px;
     border: 1px solid black;
-    grid-column: 2/3;
     grid-row: 1/2;
+    grid-column: 2/3;
 }
-.post3{
+
+.post3,
+.post4,
+.post5,
+.post6,
+.post7,
+.post8,
+.post9,
+.post10 {
     display: flex;
     flex-direction: column;
     width: 450px;
     padding: 5px;
     border: 1px solid black;
 }
-.post4{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
-.post5{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
-.post6{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
-.post7{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
-.post8{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}                       
-.post9{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
-.post10{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    padding: 5px;
-    border: 1px solid black;
-}
+
 .img{
     width: 450px;
     height: 400px;
@@ -211,15 +177,16 @@ body{
 #nestedgrid a:active{
     color: black;
 }
-.button3{
+.input{
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 10px;
+}
+.button3{
     background-color: rgb(55, 57, 59);
     color: linen;
     padding: 10px;
-    border-radius: 5px;
-    
+    border-radius: 5px; 
 }
 /* footer */
 .foot{
@@ -231,6 +198,173 @@ body{
     align-items: center;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+    padding: 40px;
 }
 
 
+/* Responsive */
+@media screen and (min-width:1020px){
+    /*CSS for PC desktop (bigger than 1020px)*/
+    body{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1020px){
+    /*CSS for tablet (bigger than 768px and smaller than 1020px)*/
+    .img{
+        width: 350px;
+        height: 300px;
+    }
+    .post1,
+    .post2,
+    .post3,
+    .post4,
+    .post5,
+    .post6,
+    .post7,
+    .post8,
+    .post9,
+    .post10 {
+        width: 350px;
+    }
+    .head-inner li{
+        margin: 0 50px;
+        font-size: 15px;
+        display: block;
+    }
+    p{
+        font-size: 18px;
+    }
+    .list li{
+        margin: 0 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:767px){
+    /*CSS for mobile phone (bigger than 481px and smaller than 767px)*/
+    .main{
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        font-size: 15px;
+        justify-content: space-evenly;
+        margin: auto 0;
+        align-items: center;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .head-inner li{
+        margin: 0 20px;
+        font-size: 15px;
+        display: block;
+    }
+    .lists{
+        flex-direction: column;
+        display: flex;
+        margin: auto 0;
+        font-size: 15px;
+    }
+    .list li{
+        margin: 0 20px;
+        font-size: 10px;
+    }
+    .search{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px;
+        margin: auto;
+    }
+    #nestedgrid{
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        width: 400px;
+        height: 300px;
+    }
+    .post1,
+    .post2,
+    .post3,
+    .post4,
+    .post5,
+    .post6,
+    .post7,
+    .post8,
+    .post9,
+    .post10 {
+        width:400px;
+    }
+}
+
+@media screen and (max-width:480px){
+    /*CSS for mobile phone(smaller than 480px)*/
+    .main{
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        font-size: 15px;
+        justify-content: space-evenly;
+        margin: auto 0;
+        align-items: center;
+    }
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    .head-inner li{
+        margin: 0 20px;
+        font-size: 12px;
+        display: block;
+    }
+    .lists{
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        margin: auto 0;
+    }
+    .list li{
+        margin: 0 10px;
+    }
+    .search{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px;
+        margin: auto;
+    }
+    #nestedgrid{
+        display: flex;
+        flex-direction: column;
+    }
+        .img{
+        width: 300px;
+        height: 200px;
+    }
+    .post1,
+    .post2,
+    .post3,
+    .post4,
+    .post5,
+    .post6,
+    .post7,
+    .post8,
+    .post9,
+    .post10 {
+        width: 300px;
+    }
+}
