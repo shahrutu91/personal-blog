@@ -1,0 +1,12 @@
+/* footer */
+.foot {
+    grid-area: ft;
+    /* border: 1px dotted blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 40px;
+    border-bottom: 1px solid black;
+}
